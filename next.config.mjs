@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images:{
-        remottePatterns:[
+        remotePatterns:[
             {
                 protocol:"https",
-                hostnamme:"images.microcms-assets.io",
+                hostname:"images.microcms-assets.io",
             },
         ],
     },
 };
 
-
+export default nextConfig;
