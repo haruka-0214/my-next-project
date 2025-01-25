@@ -15,7 +15,7 @@ export default function NewsList({ news }: Props) {
         return <p>記事がありません</p>;
     }   
     return (
-        <ul>                                                                                                                                                                                                                                                ,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+        <ul>             
             {news.map((article) => (            
                 <li key={article.id} className={styles.list}>
                     <Link href={`/news/${article.id}`} className={styles.link}>
@@ -37,8 +37,9 @@ export default function NewsList({ news }: Props) {
                         height={630}
                     />
                     )}
-                    <dl className={styles.descontent}>
-                        <dt className={styles.title}>{article.title}</dt>
+                    <dl className={styles.content}>
+                        <dt className={styles.title}>   {article.title}
+                        </dt>
                         <dd className={styles.meta}>
                             <Category category={article.category} />
                             <Date date={article.publishedAt ?? article.createdAt} />
